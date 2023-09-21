@@ -11,6 +11,11 @@ Scenario
 -----------------------------------------
 A new hire was tasked with updating the URL shortener. The new hire committed version 2 of the application to the main branch. Which automatically triggered a build, test, and deploy to the production server, replacing version 1 of the application running on the server.
 
-
-- Follow the in-class instructions
-  
+Next Steps 
+-----------------------------------------
+Create a post-incident report. The report must include:
+- What was the reason for the incident?
+- How long was the site down or malfunctioning?
+- What steps were taken to resolve the incident?
+- Was the incident fully resolved?
+- What steps would you take to prevent this from happening again?

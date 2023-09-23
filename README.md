@@ -1,7 +1,7 @@
 # Post-Incident Report
 
 ## Problem:
-- **Issue**: Our application experienced an 11-minute downtime in a single day, which exceeds our SLA allowance of only 15 minutes per year.
+- **Issue**: Our application experienced an 13-minute downtime in a single day, which exceeds our SLA allowance of only 15 minutes per year.
 
 ## Objective:
 - **Objective**: Our goal is to prevent future downtime and significantly reduce downtime in areas where it cannot be completely prevented.

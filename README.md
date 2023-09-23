@@ -1,21 +1,23 @@
-<p align="center">
-<img src="https://github.com/kura-labs-org/kuralabs_deployment_1/blob/main/Kuralogo.png">
-</p>
-<h1 align="center">C4_deployment-3.1<h1> 
+# Post-Incident Report
 
-The Story
------------------------------------------
-We’re a tech start-up company with a URL shortener tool. We have a SLA with Nike to provide them access to our URL shortener. In the SLA, we are only allowed 20 minutes of downtime a year. If anything happens to the URL shortener, we must communicate any incidents to Nike.
- 
-Scenario
------------------------------------------
-A new hire was tasked with updating the URL shortener. The new hire committed version 2 of the application to the main branch. Which automatically triggered a build, test, and deploy to the production server, replacing version 1 of the application running on the server.
+## Problem:
+- **Issue**: Our application experienced an 11-minute downtime in a single day, which exceeds our SLA allowance of only 15 minutes per year.
 
-Next Steps 
------------------------------------------
-Create a post-incident report. The report must include:
-- What was the reason for the incident?
-- How long was the site down or malfunctioning?
-- What steps were taken to resolve the incident?
-- Was the incident fully resolved?
-- What steps would you take to prevent this from happening again?
+## Objective:
+- **Objective**: Our goal is to prevent future downtime and significantly reduce downtime in areas where it cannot be completely prevented.
+
+## Incident Summary:
+- **Summary**: The URL shortener application went down due to a recent update made by a new team member. This update caused a 500 internal server error, rendering the website inaccessible.
+
+## Root Cause:
+- **Cause**: The incident occurred because the new team member committed version 2 of our application to the main branch, which contained an incorrect usage of a JSON method. They used "json.loads(urls_file)" instead of the correct "json.load(urls_file)."
+
+## Duration of Downtime:
+- **Downtime Duration**: The website was down for a total of 23 minutes.
+
+## Resolution Steps:
+
+### Step 1: Log Analysis
+- **Analysis**: We examined Elastic Beanstalk logs to identify errors using the following Bash command:
+  ```bash
+  eb logs | grep -C 3 'error' | nl -w3 -s':' | sort -u -k2,2 | sort -n -k1,1 > error_hunt_filtered.txt

@@ -41,7 +41,7 @@
 ## Incident Resolution:
 The incident was fully resolved after identifying and correcting the error in the "application.py" file.
 
-# Preventive Measures to Avoid Similar Incidents
+## Preventive Measures to Avoid Similar Incidents
 
 To prevent a similar incident from happening again, consider implementing the following preventive measures and improvements based on the lessons learned from the post-incident report:
 

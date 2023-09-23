@@ -1,19 +1,19 @@
 # Post-Incident Report
 
 ## Problem:
-- **Issue**: Our application experienced an 13-minute downtime in a single day, which exceeds our SLA allowance of only 15 minutes per year.
+- Our application experienced an 13-minute downtime in a single day, which exceeds our SLA allowance of only 15 minutes per year.
 
 ## Objective:
-- **Objective**: Our goal is to prevent future downtime and significantly reduce downtime in areas where it cannot be completely prevented.
+-  Our goal is to prevent future downtime and significantly reduce downtime in areas where it cannot be completely prevented.
 
 ## Incident Summary:
-- **Summary**: The URL shortener application went down due to a recent update made by a new team member. This update caused a 500 internal server error, rendering the website inaccessible.
+- The URL shortener application went down due to a recent update made by a new team member. This update caused a 500 internal server error, rendering the website inaccessible.
 
 ## Root Cause:
-- **Cause**: The incident occurred because the new team member committed version 2 of our application to the main branch, which contained an incorrect usage of a JSON method. They used "json.loads(urls_file)" instead of the correct "json.load(urls_file)."
+- The incident occurred because the new team member committed version 2 of our application to the main branch, which contained an incorrect usage of a JSON method. They used "json.loads(urls_file)" instead of the correct "json.load(urls_file)."
 
 ## Duration of Downtime:
-- **Downtime Duration**: The website was down for a total of 13 minutes.
+- The website was down for a total of 13 minutes.
 
 ## Resolution Steps:
 
